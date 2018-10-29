@@ -33,9 +33,13 @@ and armhf (compatible with all Raspberry Pi models).
 
        wget -q -O - https://apt.mopidy.com/mopidy.gpg | sudo apt-key add -
 
-#. Add the APT repo to your package sources::
+#. Add the APT repo to your package sources. Choose the correct command for your OS version:
 
        sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/stretch.list
+       sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/wheezy.list
+       sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/jessie
+       
+   Check `/etc/os-release` to see which is the appropriate file to download if you are not sure.
 
 #. Install Mopidy and all dependencies::
 
